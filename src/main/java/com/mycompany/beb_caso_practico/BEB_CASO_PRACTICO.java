@@ -4,6 +4,8 @@
 
 package com.mycompany.beb_caso_practico;
 
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author ESTUDIANTE
@@ -11,6 +13,14 @@ package com.mycompany.beb_caso_practico;
 public class BEB_CASO_PRACTICO {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                
+                VentanaPrincipal formulario = new VentanaPrincipal();
+                formulario.setVisible(true);
+            }
+            
+        }); 
     }
 }
