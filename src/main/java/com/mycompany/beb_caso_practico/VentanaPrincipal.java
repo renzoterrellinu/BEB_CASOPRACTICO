@@ -3,16 +3,42 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.beb_caso_practico;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.sql.PreparedStatement; 
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author ESTUDIANTE
  */
 public class VentanaPrincipal extends javax.swing.JFrame {
-
-    /**
-     * Creates new form VentanaPrincipal
-     */
+    //Conexion a la base de datos 
+    public class Conexion{
+    String url = "jdbc:mysql://localhost:3306/beb";
+    String user = "root";
+    String pass = "";
+    
+    public Connection conectar(){
+        Connection con = null;
+        try{
+            con= DriverManager.getConnection(url,user,pass);
+            System.out.println("Conexión a la base de datos exitosa");
+        }catch(SQLException e){
+            System.out.println("Error de conexión : "+e.getMessage()
+            );
+        }
+        return con;
+    }
+    };
+    
+    
     public VentanaPrincipal() {
         initComponents();
     }
