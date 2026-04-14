@@ -11,7 +11,7 @@ import javax.swing.SwingUtilities;
  * @author ESTUDIANTE
  */
 public class BEB_CASO_PRACTICO {
-
+    
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
