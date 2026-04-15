@@ -23,6 +23,8 @@ public class AsesoresFinancieros extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         listar();
+        this.setResizable(false);
+        this.setResizable(false);
     }
     public void listar() {
     try {

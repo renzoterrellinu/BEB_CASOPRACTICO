@@ -25,6 +25,7 @@ public class GestionTransacciones extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         listar();
+        this.setResizable(false);
     }
     public void listar() {
     try {

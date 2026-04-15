@@ -8,7 +8,9 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import javax.swing.table.DefaultTableModel;
 import com.mycompany.beb_caso_practico.ConexionBD.ConexionDB;
-
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import java.awt.Image;
 
 /**
  *
@@ -19,8 +21,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public VentanaPrincipal() {
         initComponents();
         setLocationRelativeTo(null); //para centrar la ventana
+        this.setResizable(false);
         
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
