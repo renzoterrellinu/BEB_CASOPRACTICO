@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import com.mycompany.beb_caso_practico.ConexionBD.ConexionDB;
 import java.sql.SQLException;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -338,13 +339,17 @@ public class GestionProductos extends javax.swing.JFrame {
 
         ps.executeUpdate();
 
-        JOptionPane.showMessageDialog(null, "Producto agregado");
+      
+    
+    JOptionPane.showMessageDialog(this, "Producto agregado");
+
+
 
         listar();
         limpiar();
 
     } catch (Exception e) {
-        JOptionPane.showMessageDialog(null, e.getMessage());
+        JOptionPane.showMessageDialog(this, e.getMessage());
     }
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -362,16 +367,16 @@ public class GestionProductos extends javax.swing.JFrame {
         int res = ps.executeUpdate();
 
         if (res > 0) {
-            JOptionPane.showMessageDialog(null, "Producto actualizado");
+            JOptionPane.showMessageDialog(this, "Producto actualizado");
         } else {
-            JOptionPane.showMessageDialog(null, "No se encontró el producto");
+            JOptionPane.showMessageDialog(this, "No se encontró el producto");
         }
 
         listar();
         limpiar();
 
     } catch (Exception e) {
-        JOptionPane.showMessageDialog(null, e.getMessage());
+        JOptionPane.showMessageDialog(this, e.getMessage());
     }
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -385,16 +390,16 @@ public class GestionProductos extends javax.swing.JFrame {
         int res = ps.executeUpdate();
 
         if (res > 0) {
-            JOptionPane.showMessageDialog(null, "Producto eliminado");
+            JOptionPane.showMessageDialog(this, "Producto eliminado");
         } else {
-            JOptionPane.showMessageDialog(null, "No se encontró el producto");
+            JOptionPane.showMessageDialog(this, "No se encontró el producto");
         }
 
         listar();
         limpiar();
 
     } catch (Exception e) {
-        JOptionPane.showMessageDialog(null, e.getMessage());
+        JOptionPane.showMessageDialog(this, e.getMessage());
     }
     }//GEN-LAST:event_jButton4ActionPerformed
 

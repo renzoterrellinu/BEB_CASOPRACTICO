@@ -34,8 +34,7 @@ public class GestionPlanes extends javax.swing.JFrame {
         modelo.addColumn("Tipo");
         modelo.addColumn("Monto");
         modelo.addColumn("Rentabilidad");
-        modelo.addColumn("ID Cliente");
-
+        
         Statement st = conn.createStatement();
         ResultSet rs = st.executeQuery("SELECT * FROM planes_inversion");
 
@@ -45,7 +44,7 @@ public class GestionPlanes extends javax.swing.JFrame {
                 rs.getString("tipo_plan"),
                 rs.getDouble("monto"),
                 rs.getDouble("rentabilidad"),
-                rs.getInt("id_cliente")
+            
             });
         }
 
