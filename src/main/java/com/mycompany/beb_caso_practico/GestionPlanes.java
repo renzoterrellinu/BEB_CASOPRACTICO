@@ -34,7 +34,8 @@ public class GestionPlanes extends javax.swing.JFrame {
         modelo.addColumn("Tipo");
         modelo.addColumn("Monto");
         modelo.addColumn("Rentabilidad");
-        
+        modelo.addColumn("ID Cliente"); // <--- AÑADE ESTA LÍNEA
+
         Statement st = conn.createStatement();
         ResultSet rs = st.executeQuery("SELECT * FROM planes_inversion");
 
@@ -44,14 +45,14 @@ public class GestionPlanes extends javax.swing.JFrame {
                 rs.getString("tipo_plan"),
                 rs.getDouble("monto"),
                 rs.getDouble("rentabilidad"),
-            
+                rs.getInt("id_cliente") // <--- AÑADE ESTA LÍNEA
             });
         }
 
         jTable1.setModel(modelo);
 
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(null, e.getMessage());
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(this, e.getMessage()); // Recuerda usar 'this'
     }
 }
     public void limpiar() {
@@ -339,7 +340,7 @@ public class GestionPlanes extends javax.swing.JFrame {
         jTextField2.setText(jTable1.getValueAt(fila, 1).toString()); // Tipo
         jTextField3.setText(jTable1.getValueAt(fila, 2).toString()); // Monto
         jTextField4.setText(jTable1.getValueAt(fila, 3).toString()); // Rentabilidad
-        jTextField5.setText(jTable1.getValueAt(fila, 4).toString()); // ID Cliente
+        jTextField5.setText(jTable1.getValueAt(fila, 4).toString()); // ID Cliente  
     } else {
         JOptionPane.showMessageDialog(null, "Selecciona una fila");
     }

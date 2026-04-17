@@ -242,19 +242,6 @@ public class AsesoresFinancieros extends javax.swing.JFrame {
 }
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        int fila = jTable1.getSelectedRow();
-
-if (fila >= 0) {
-    jTextField1.setText(jTable1.getValueAt(fila, 0).toString());
-    jTextField2.setText(jTable1.getValueAt(fila, 1).toString());
-    jTextField3.setText(jTable1.getValueAt(fila, 2).toString());
-    jTextField4.setText(jTable1.getValueAt(fila, 3).toString());
-} else {
-    JOptionPane.showMessageDialog(null, "Selecciona un asesor");
-}
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
     try {
     String sql = "INSERT INTO asesores_financieros(nombre, especialidad, telefono) VALUES (?, ?, ?)";
@@ -306,6 +293,19 @@ if (fila >= 0) {
         new VentanaPrincipal().setVisible(true);
 this.dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        int fila = jTable1.getSelectedRow();
+
+        if (fila >= 0) {
+            jTextField1.setText(jTable1.getValueAt(fila, 0).toString());
+            jTextField2.setText(jTable1.getValueAt(fila, 1).toString());
+            jTextField3.setText(jTable1.getValueAt(fila, 2).toString());
+            jTextField4.setText(jTable1.getValueAt(fila, 3).toString());
+        } else {
+            JOptionPane.showMessageDialog(null, "Selecciona un asesor");
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

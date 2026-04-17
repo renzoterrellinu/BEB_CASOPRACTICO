@@ -95,7 +95,6 @@ public class GestionTransacciones extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 153, 153), new java.awt.Color(0, 153, 153)));
 
         jButton5.setBackground(new java.awt.Color(255, 153, 51));
-        jButton5.setIcon(new javax.swing.ImageIcon("C:\\Users\\ESTUDIANTE\\Desktop\\IMG\\hacia-atras.png")); // NOI18N
         jButton5.setText("Atras");
         jButton5.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(255, 102, 0), new java.awt.Color(255, 102, 0)));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -124,7 +123,6 @@ public class GestionTransacciones extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(0, 153, 153));
         jLabel1.setFont(new java.awt.Font("Showcard Gothic", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\ESTUDIANTE\\Desktop\\IMG\\retorno-de-la-inversion.png")); // NOI18N
         jLabel1.setText("                                                      Gestion de Transacciones");
         jLabel1.setOpaque(true);
 
@@ -209,7 +207,6 @@ public class GestionTransacciones extends javax.swing.JFrame {
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 153, 153), new java.awt.Color(0, 153, 153)));
 
         jButton1.setBackground(new java.awt.Color(204, 204, 204));
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\ESTUDIANTE\\Desktop\\IMG\\eleccion.png")); // NOI18N
         jButton1.setText("Elegir");
         jButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -219,7 +216,6 @@ public class GestionTransacciones extends javax.swing.JFrame {
         });
 
         jButton3.setBackground(new java.awt.Color(0, 153, 204));
-        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\ESTUDIANTE\\Desktop\\IMG\\lapiz-de-cejas.png")); // NOI18N
         jButton3.setText("Editar");
         jButton3.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 51, 204), new java.awt.Color(0, 51, 204)));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -229,7 +225,6 @@ public class GestionTransacciones extends javax.swing.JFrame {
         });
 
         jButton4.setBackground(new java.awt.Color(255, 102, 102));
-        jButton4.setIcon(new javax.swing.ImageIcon("C:\\Users\\ESTUDIANTE\\Desktop\\IMG\\eliminar.png")); // NOI18N
         jButton4.setText("Eliminar");
         jButton4.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(255, 0, 0), new java.awt.Color(255, 0, 0)));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -239,7 +234,6 @@ public class GestionTransacciones extends javax.swing.JFrame {
         });
 
         jButton2.setBackground(new java.awt.Color(0, 204, 51));
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\ESTUDIANTE\\Desktop\\IMG\\agregar.png")); // NOI18N
         jButton2.setText("Añadir");
         jButton2.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 153, 51), new java.awt.Color(0, 153, 51)));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -287,7 +281,7 @@ public class GestionTransacciones extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(78, 78, 78))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(138, Short.MAX_VALUE)
+                .addContainerGap(126, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -316,7 +310,10 @@ public class GestionTransacciones extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
